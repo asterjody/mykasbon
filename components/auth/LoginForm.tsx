@@ -38,7 +38,7 @@ export function LoginForm() {
   return (
     <div className="w-full max-w-md mx-auto">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Selamat Datang</h1>
+        <h1 className="text-3xl font-bold text-gray-900">MyKasbon</h1>
         <p className="text-gray-600 mt-2">Kelola utang piutang dengan mudah</p>
       </div>
 

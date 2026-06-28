@@ -14,13 +14,13 @@ interface DebtListProps {
   onAddNew?: () => void; // Optional callback for add new
 }
 
-export function DebtList({ 
-  debts, 
-  loading, 
-  onToggleSettle, 
-  onEdit, 
+export function DebtList({
+  debts,
+  loading,
+  onToggleSettle,
+  onEdit,
   onDelete,
-  onAddNew 
+  onAddNew,
 }: DebtListProps) {
   if (loading) {
     return (
@@ -29,17 +29,6 @@ export function DebtList({
           <Skeleton key={i} className="h-24" />
         ))}
       </div>
-    );
-  }
-
-  if (debts.length === 0) {
-    return (
-      <EmptyState
-        title="Belum ada data"
-        description="Mulai catat utang piutangmu sekarang"
-        actionLabel="Catat Baru"
-        onAction={onAddNew}
-      />
     );
   }
 

@@ -1,5 +1,3 @@
-import { User } from '@supabase/supabase-js';
-
 export type DebtType = 'owed_to_me' | 'i_owe';
 
 export interface Debt {
@@ -15,10 +13,17 @@ export interface Debt {
   updated_at: string;
 }
 
-export type DebtInsert = Omit<
-  Debt,
-  'id' | 'user_id' | 'created_at' | 'updated_at'
->;
-export type DebtUpdate = Partial<DebtInsert>;
+export interface DebtSummary {
+  totalOwedToMe: number;
+  totalIOwe: number;
+  net: number;
+}
 
-export type { User };
+export type SortOption = 'newest' | 'oldest' | 'amount_high' | 'amount_low';
+
+export interface GroupedDebt {
+  counterpart_name: string;
+  debts: Debt[];
+  totalAmount: number;
+  count: number;
+}

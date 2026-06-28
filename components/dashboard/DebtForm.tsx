@@ -139,7 +139,7 @@ export function DebtForm({ debt, onClose, onSave }: DebtFormProps) {
     <Modal
       isOpen
       onClose={onClose}
-      title={isEditing ? 'Edit Entry' : 'Catat Baru'}
+      title={isEditing ? 'Edit Entry' : 'Tambah'}
     >
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="space-y-1">
