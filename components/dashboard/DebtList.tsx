@@ -32,6 +32,17 @@ export function DebtList({
     );
   }
 
+  if (debts.length === 0) {
+    return (
+      <EmptyState
+        title="Belum ada data"
+        description="Mulai catat utang piutangmu sekarang"
+        actionLabel="Catat Baru"
+        onAction={onAddNew}
+      />
+    );
+  }
+
   return (
     <div className="space-y-3">
       {debts.map((debt) => (
